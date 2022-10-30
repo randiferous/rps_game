@@ -6,10 +6,21 @@ let losses = 0;
 let ties = 0;
 // use a prompt so user can enter "rock", "paper", or "scissor"
 for (let i = 0; i < 10; i++) {
+    // computer chooses a random value from the array of 'choices
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
     let userChoice = prompt("Enter 'rock', 'paper', or 'scissors' to play!");
-    console.log(userChoice);
+
+    if (userChoice === "rock" || userChoice === "paper" || userChoice === "scissors") {
+        alert("The computer chose " + computerChoice);
+
+        if (userChoice === "rock" && computerChoice === "scissors") {
+            wins++;
+            alert("You've won " + wins + " time(s)!");
+        }
+    }
 }
-// computer chooses a random value from the array of 'choices
+
 // in order to determine if the user wins or not:
 // initialize "wins", "losses", "ties" variables
 // the following will be created using a combination of if/else, switch cases, or for loops:
