@@ -1,5 +1,14 @@
 // initialize array of 'choices': rock, paper, scissor
+const choices = ["rock", "paper", "scissors"];
+
+let wins = 0;
+let losses = 0;
+let ties = 0;
 // use a prompt so user can enter "rock", "paper", or "scissor"
+for (let i = 0; i < 10; i++) {
+    let userChoice = prompt("Enter 'rock', 'paper', or 'scissors' to play!");
+    console.log(userChoice);
+}
 // computer chooses a random value from the array of 'choices
 // in order to determine if the user wins or not:
 // initialize "wins", "losses", "ties" variables
